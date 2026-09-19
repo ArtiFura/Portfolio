@@ -21,25 +21,25 @@
   --selection-bg: var(--color-gold-dark);
   --selection-color: var(--color-gold-bright);
 
-  /* Dual-Theme Typography Tokens (Dark: Glowing Golden Text & Border) */
+  /* Dual-Theme Typography Tokens (Dark: Crisp Clean Golden Text without Unwanted Glow) */
   --display-text-color: #E6C65C;
-  --display-text-stroke: 1.5px #E6C65C;
-  --display-text-glow: 0 0 16px rgba(230, 198, 92, 0.75), 0 0 32px rgba(201, 162, 39, 0.45);
+  --display-text-stroke: 0 transparent;
+  --display-text-glow: none;
   
-  --display-text-hover-stroke: 1.5px #FFF0A0;
-  --display-text-hover-glow: 0 0 24px rgba(255, 240, 160, 0.9), 0 0 45px rgba(230, 198, 92, 0.65);
+  --display-text-hover-stroke: 0 transparent;
+  --display-text-hover-glow: none;
 
   --body-accent-color: #E6C65C;
-  --body-accent-stroke: 0.35px #E6C65C;
-  --body-accent-glow: 0 0 10px rgba(230, 198, 92, 0.5);
+  --body-accent-stroke: 0 transparent;
+  --body-accent-glow: none;
 
-  --micro-text-color: #E6C65C;
-  --micro-text-stroke: 0.35px #E6C65C;
-  --micro-text-glow: 0 0 8px rgba(230, 198, 92, 0.5);
+  --micro-text-color: #C9A227;
+  --micro-text-stroke: 0 transparent;
+  --micro-text-glow: none;
 
   --svg-text-fill: #E6C65C;
-  --svg-text-stroke: #E6C65C;
-  --svg-text-glow: drop-shadow(0 0 6px rgba(230, 198, 92, 0.6));
+  --svg-text-stroke: transparent;
+  --svg-text-glow: none;
 
   /* Typography Families */
   --font-cursive: 'Lobster', 'Rouge Script', cursive;
@@ -79,10 +79,10 @@
   /* Dual-Theme Typography Tokens (Light: Black Fill with Noticeable Golden Border) */
   --display-text-color: #000000;
   --display-text-stroke: 1.5px var(--color-gold-primary);
-  --display-text-glow: 0 0 16px rgba(201, 162, 39, 0.25);
+  --display-text-glow: none;
   
   --display-text-hover-stroke: 1.5px var(--color-gold-bright);
-  --display-text-hover-glow: 0 0 24px rgba(230, 198, 92, 0.45);
+  --display-text-hover-glow: none;
 
   --body-accent-color: #000000;
   --body-accent-stroke: 0.35px var(--color-gold-primary);
