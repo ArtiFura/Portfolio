@@ -1,0 +1,325 @@
+/* ==========================================================================
+   Contact Experience Styles
+   Featuring Scaled Typography, Technical Details & Interactive Gold Path
+   ========================================================================== */
+
+.contact-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-black);
+  border-top: 1px solid var(--color-gold-hairline);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(80px, 11vh, 120px) var(--page-padding-x) clamp(30px, 5vh, 60px);
+}
+
+/* Header */
+.contact-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-gold-hairline);
+  padding-bottom: 14px;
+  position: relative;
+  z-index: var(--z-content);
+}
+
+.contact-meta-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-label {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.25em;
+  color: var(--color-gold-muted);
+}
+
+.contact-section-tag {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  color: var(--color-gold-bright);
+}
+
+/* Central Refined Glass Contact Console */
+.contact-body {
+  position: relative;
+  z-index: var(--z-content);
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-glass-console {
+  width: 100%;
+  max-width: 860px;
+  padding: clamp(28px, 4.5vh, 46px) clamp(26px, 4.5vw, 50px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 3vh, 30px);
+  position: relative;
+  border: 1.5px solid var(--color-gold-primary);
+  background: var(--glass-bg-medium);
+  box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.14), 0 0 20px rgba(201, 162, 39, 0.16);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-glass-console:hover {
+  border-color: var(--color-gold-bright);
+  box-shadow: 0 16px 44px -8px rgba(0, 0, 0, 0.2), 0 0 26px rgba(230, 198, 92, 0.22);
+}
+
+.contact-console-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--color-gold-hairline);
+  position: relative;
+  z-index: 4;
+}
+
+.contact-console-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-pulse-beacon {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-gold-bright);
+  box-shadow: 0 0 8px var(--color-gold-bright);
+  animation: beaconPulse 2.6s infinite ease-in-out;
+}
+
+.contact-console-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  z-index: 4;
+}
+
+.contact-headline {
+  font-family: var(--font-cursive);
+  font-size: clamp(2.6rem, 5.5vw, 5.2rem);
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--display-text-color);
+  -webkit-text-stroke: var(--display-text-stroke);
+  paint-order: stroke fill;
+  text-transform: none;
+  margin: 0;
+  text-shadow: var(--display-text-glow);
+  will-change: transform, opacity;
+  transition: -webkit-text-stroke-color 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.contact-headline:hover {
+  -webkit-text-stroke: var(--display-text-hover-stroke);
+  text-shadow: var(--display-text-hover-glow);
+}
+
+.contact-console-sub {
+  font-family: var(--font-sans);
+  font-size: clamp(0.82rem, 1.05vw, 1rem);
+  color: var(--body-accent-color);
+  -webkit-text-stroke: var(--body-accent-stroke);
+  paint-order: stroke fill;
+  text-shadow: var(--body-accent-glow);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  max-width: 560px;
+  line-height: 1.6;
+  transition: color 0.3s ease, -webkit-text-stroke 0.3s ease, text-shadow 0.3s ease;
+}
+
+.contact-action-row {
+  display: flex;
+  align-items: center;
+  margin: 4px 0;
+  position: relative;
+  z-index: 4;
+}
+
+.contact-glass-cta {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  color: var(--display-text-color);
+  -webkit-text-stroke: var(--micro-text-stroke);
+  paint-order: stroke fill;
+  text-shadow: var(--micro-text-glow);
+  border: 1.5px solid var(--color-gold-primary);
+  background: var(--glass-bg-medium);
+  box-shadow: 0 0 14px rgba(201, 162, 39, 0.12);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, -webkit-text-stroke-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-glass-cta:hover {
+  border-color: var(--color-gold-bright);
+  -webkit-text-stroke: var(--display-text-hover-stroke);
+  text-shadow: var(--display-text-hover-glow);
+  box-shadow: 0 0 22px rgba(230, 198, 92, 0.35);
+}
+
+.glass-btn-arrow {
+  display: inline-block;
+  color: var(--color-gold-primary);
+  font-weight: 900;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+.contact-glass-cta:hover .glass-btn-arrow {
+  transform: translateX(5px);
+  color: var(--color-gold-bright);
+}
+
+/* Interactive Email & Wave Canvas Area */
+.contact-interactive-zone {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: clamp(18px, 3vh, 26px) clamp(20px, 3vw, 32px);
+  background: var(--glass-bg-medium);
+  border: 1.5px solid var(--color-gold-primary);
+  border-radius: 4px;
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.1), 0 0 18px rgba(201, 162, 39, 0.15);
+  cursor: crosshair;
+  z-index: 4;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-interactive-zone:hover {
+  border-color: var(--color-gold-bright);
+  box-shadow: 0 12px 32px -6px rgba(0, 0, 0, 0.15), 0 0 24px rgba(230, 198, 92, 0.25);
+}
+
+.contact-email-wrap {
+  position: relative;
+  display: inline-block;
+  align-self: flex-start;
+}
+
+.contact-email-link {
+  font-family: var(--font-sans);
+  font-size: clamp(1.35rem, 3vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--display-text-color);
+  -webkit-text-stroke: var(--display-text-stroke);
+  paint-order: stroke fill;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 6px;
+  text-shadow: var(--display-text-glow);
+  transition: -webkit-text-stroke-color 0.35s ease, text-shadow 0.35s ease, color 0.35s ease;
+}
+
+.contact-email-link:hover {
+  -webkit-text-stroke: var(--display-text-hover-stroke);
+  text-shadow: var(--display-text-hover-glow);
+}
+
+/* Interactive Elastic Gold Path SVG */
+.contact-wave-svg {
+  width: 100%;
+  max-width: 560px;
+  height: 50px;
+  overflow: visible;
+}
+
+.contact-wave-path {
+  stroke: var(--color-gold-primary);
+  stroke-width: 1.2;
+  fill: none;
+  transition: stroke 0.3s ease;
+}
+
+.contact-interactive-zone:hover .contact-wave-path {
+  stroke: var(--color-gold-bright);
+}
+
+/* Footer Information */
+.contact-footer {
+  position: relative;
+  z-index: var(--z-content);
+  border-top: 1px solid var(--color-gold-hairline);
+  padding-top: clamp(16px, 2.5vh, 28px);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.contact-brand-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-brand-name {
+  font-family: var(--font-cursive);
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+  color: var(--color-gold-bright);
+  text-transform: none;
+}
+
+.contact-brand-geo {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+  color: var(--color-gold-muted);
+  text-transform: uppercase;
+}
+
+.contact-rights-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.contact-rights-text {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  color: var(--color-gold-muted);
+  text-transform: uppercase;
+}
+
+.contact-scroll-top-btn {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  color: var(--color-gold-primary);
+  text-transform: uppercase;
+  margin-top: 6px;
+  transition: color 0.3s ease;
+}
+
+.contact-scroll-top-btn:hover {
+  color: var(--color-gold-bright);
+}
+
+@media (max-width: 768px) {
+  .contact-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .contact-rights-block {
+    align-items: flex-start;
+  }
+}

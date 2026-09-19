@@ -1,0 +1,217 @@
+/* ==========================================================================
+   ARTIFURA - Editorial Typography & Technical Instrument Labels
+   Scaled Down for 35% Typography / 65% Interactive Visuals Ratio
+   ========================================================================== */
+
+/* Brand Display Cursive */
+.type-brand {
+  font-family: var(--font-cursive);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--color-gold-bright);
+}
+
+/* Monumental Editorial Headings (Balanced Scale: ~70-110px max) */
+.type-monument {
+  font-family: var(--font-cursive);
+  font-size: clamp(2.8rem, 6.5vw, 6.2rem);
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--color-gold-bright);
+  text-transform: none;
+}
+
+/* Secondary Editorial Display (~40-65px max) */
+.type-display {
+  font-family: var(--font-cursive);
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  line-height: 1.15;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--color-gold-bright);
+  text-transform: none;
+}
+
+/* Script Emphases */
+.type-italic {
+  font-family: var(--font-cursive);
+  font-weight: 400;
+}
+
+/* Philosophy Statement Typography (~24-44px max) */
+.type-statement {
+  font-family: var(--font-cursive);
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
+  line-height: 1.25;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--color-gold-bright);
+  text-transform: none;
+}
+
+/* Minimal Monospace / Technical Labels (Sans-serif: 10px–13px) */
+.type-label {
+  font-family: var(--font-sans);
+  font-size: clamp(0.65rem, 0.8vw, 0.78rem);
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-gold-muted);
+}
+
+.type-label-bright {
+  font-family: var(--font-sans);
+  font-size: clamp(0.65rem, 0.8vw, 0.78rem);
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-gold-bright);
+}
+
+/* Nav Typography */
+.type-nav {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold-primary);
+}
+
+/* Editorial Body & Supporting Text */
+.type-body {
+  font-family: var(--font-sans);
+  font-size: clamp(0.85rem, 1.1vw, 1.05rem);
+  line-height: 1.75;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  color: var(--color-gold-primary);
+}
+
+/* Editorial About Text (~28-50px) */
+.type-editorial-lead {
+  font-family: var(--font-cursive);
+  font-size: clamp(1.8rem, 3.4vw, 3.4rem);
+  line-height: 1.25;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: var(--color-gold-bright);
+}
+
+/* Contact Specific Typography (~50-95px max) */
+.type-contact-hero {
+  font-family: var(--font-cursive);
+  font-size: clamp(2.8rem, 7vw, 6.8rem);
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--color-gold-bright);
+  text-transform: none;
+}
+
+.type-contact-email {
+  font-family: var(--font-sans);
+  font-size: clamp(1.1rem, 2.5vw, 2.4rem);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--color-gold-primary);
+  display: inline-block;
+  position: relative;
+}
+
+/* Technical Coordinate & Micro Detail Labels */
+.tech-micro-label {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--micro-text-color);
+  -webkit-text-stroke: var(--micro-text-stroke);
+  paint-order: stroke fill;
+  text-shadow: var(--micro-text-glow);
+  transition: color 0.3s ease, -webkit-text-stroke 0.3s ease, text-shadow 0.3s ease;
+}
+
+.tech-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--micro-text-color);
+  -webkit-text-stroke: var(--micro-text-stroke);
+  paint-order: stroke fill;
+  text-shadow: var(--micro-text-glow);
+  border: 1.5px solid var(--color-gold-primary);
+  padding: 3px 10px;
+  background: var(--glass-bg-light);
+  box-shadow: 0 0 10px rgba(201, 162, 39, 0.14);
+  text-transform: uppercase;
+  transition: color 0.3s ease, -webkit-text-stroke 0.3s ease, text-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.tech-tag-pulse {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--color-gold-bright);
+  box-shadow: 0 0 6px var(--color-gold-bright);
+  animation: techPulse 2s infinite ease-in-out;
+}
+
+@keyframes techPulse {
+  0%, 100% { opacity: 0.4; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.tech-coord {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--micro-text-color);
+  -webkit-text-stroke: var(--micro-text-stroke);
+  paint-order: stroke fill;
+  text-shadow: var(--micro-text-glow);
+  transition: color 0.3s ease, -webkit-text-stroke 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Minimalist Interactive Control Pill Button */
+.tech-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  color: var(--micro-text-color);
+  -webkit-text-stroke: var(--micro-text-stroke);
+  paint-order: stroke fill;
+  text-shadow: var(--micro-text-glow);
+  border: 1.5px solid var(--color-gold-primary);
+  padding: 5px 12px;
+  background: var(--glass-bg-light);
+  box-shadow: 0 0 10px rgba(201, 162, 39, 0.12);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-transform: uppercase;
+}
+
+.tech-pill-btn:hover {
+  border-color: var(--color-gold-bright);
+  -webkit-text-stroke: var(--display-text-hover-stroke);
+  text-shadow: var(--display-text-hover-glow);
+  box-shadow: 0 0 16px rgba(230, 198, 92, 0.3);
+}
+
+.tech-pill-btn.active {
+  color: var(--color-gold-bright);
+  border-color: var(--color-gold-bright);
+  background: var(--color-gold-dark);
+}

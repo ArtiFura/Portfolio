@@ -1,0 +1,18 @@
+/* ==========================================================================
+   ARTIFURA - Living Background Particle Field Canvas Styles
+   Fixed, full-viewport, pointer-events none, GPU composited
+   ========================================================================== */
+
+.artifura-particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: var(--z-background);
+  pointer-events: none;
+  background-color: transparent;
+  display: block;
+  contain: strict;
+  will-change: transform;
+}

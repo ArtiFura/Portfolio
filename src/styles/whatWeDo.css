@@ -1,0 +1,244 @@
+/* ==========================================================================
+   What We Do Experience Styles
+   Featuring 3 Bespoke Technical Visual Systems
+   ========================================================================== */
+
+.whatwedo-section {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-black);
+  height: 280vh;
+  border-top: 1px solid var(--color-gold-hairline);
+}
+
+.whatwedo-pin-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(80px, 11vh, 120px) var(--page-padding-x) clamp(30px, 5vh, 60px);
+  overflow: hidden;
+}
+
+/* Header */
+.whatwedo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-gold-hairline);
+  padding-bottom: 14px;
+  position: relative;
+  z-index: var(--z-content);
+}
+
+.whatwedo-meta-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Main Visual Stage */
+.whatwedo-stage {
+  position: relative;
+  z-index: var(--z-content);
+  margin: auto 0;
+  width: 100%;
+  max-width: 1350px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 3vh, 36px);
+}
+
+/* Three Discipline Floating Glass Modules */
+.whatwedo-discipline-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  align-items: center;
+  gap: clamp(24px, 4vw, 56px);
+  padding: clamp(18px, 2.8vh, 26px) clamp(22px, 3vw, 36px);
+  border: 1.5px solid var(--color-gold-primary);
+  background: var(--glass-bg-medium);
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.12), 0 0 16px rgba(201, 162, 39, 0.14);
+  will-change: transform, opacity;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatwedo-discipline-row:hover {
+  border-color: var(--color-gold-bright);
+  box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.16), 0 0 22px rgba(230, 198, 92, 0.22);
+}
+
+.module-gold-beacon {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-gold-bright);
+  box-shadow: 0 0 8px var(--color-gold-bright);
+  animation: beaconPulse 2.8s infinite ease-in-out;
+}
+
+@keyframes beaconPulse {
+  0%, 100% { opacity: 0.5; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.35); box-shadow: 0 0 10px var(--color-gold-bright); }
+}
+
+/* Text Column */
+.discipline-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  z-index: 4;
+}
+
+.discipline-tag-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.discipline-word {
+  font-family: var(--font-cursive);
+  font-size: clamp(2.2rem, 4.5vw, 4.2rem);
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--display-text-color);
+  -webkit-text-stroke: var(--display-text-stroke);
+  paint-order: stroke fill;
+  text-transform: none;
+  text-shadow: var(--display-text-glow);
+  transition: -webkit-text-stroke-color 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.whatwedo-discipline-row:hover .discipline-word {
+  -webkit-text-stroke: var(--display-text-hover-stroke);
+  text-shadow: var(--display-text-hover-glow);
+}
+
+/* Visual Systems Canvas Column */
+.discipline-visual-box {
+  position: relative;
+  width: 100%;
+  height: clamp(84px, 12.5vh, 115px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: crosshair;
+}
+
+.discipline-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* System 1: Software Pipeline */
+.flow-line {
+  stroke: var(--color-gold-primary);
+  stroke-width: 1.2;
+  opacity: 0.6;
+}
+
+.flow-packet {
+  fill: var(--color-gold-bright);
+}
+
+.flow-node-box {
+  stroke: var(--color-gold-primary);
+  stroke-width: 1.5;
+  fill: var(--glass-bg-light);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+  transition: stroke 0.3s ease, fill 0.3s ease;
+}
+
+.flow-node-text {
+  font-family: var(--font-sans);
+  font-size: 7.5px;
+  letter-spacing: 0.2em;
+  fill: var(--svg-text-fill);
+  stroke: var(--svg-text-stroke);
+  stroke-width: 0.35px;
+  paint-order: stroke fill;
+  filter: var(--svg-text-glow);
+  font-weight: 800;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.de-state-label {
+  font-family: var(--font-sans);
+  font-size: 6.8px;
+  letter-spacing: 0.18em;
+  font-weight: 800;
+  fill: var(--svg-text-fill) !important;
+  stroke: var(--svg-text-stroke);
+  stroke-width: 0.35px;
+  paint-order: stroke fill;
+  filter: var(--svg-text-glow);
+  text-anchor: start;
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+/* System 2: Systems Matrix */
+.matrix-line {
+  stroke: var(--color-gold-hairline);
+  stroke-width: 1;
+}
+
+.matrix-line-active {
+  stroke: var(--color-gold-primary);
+  stroke-width: 1.2;
+}
+
+.matrix-node {
+  fill: var(--color-gold-bright);
+  stroke: #000000;
+  stroke-width: 0.8;
+  transition: r 0.3s ease;
+}
+
+/* System 3: Digital Experiences Abstract Viewport */
+.viewport-frame {
+  stroke: var(--color-gold-primary);
+  stroke-width: 1.5;
+  fill: var(--glass-bg-light);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+.viewport-curve {
+  stroke: var(--color-gold-bright);
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.viewport-cursor {
+  stroke: var(--color-gold-bright);
+  stroke-width: 1.2;
+  fill: none;
+}
+
+/* Footer */
+.whatwedo-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid var(--color-gold-hairline);
+  padding-top: 14px;
+  position: relative;
+  z-index: var(--z-content);
+}
+
+@media (max-width: 860px) {
+  .whatwedo-discipline-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .discipline-visual-box {
+    height: 70px;
+  }
+}

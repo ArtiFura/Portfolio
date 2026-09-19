@@ -1,0 +1,289 @@
+@import './glass.css';
+
+/* ==========================================================================
+   ARTIFURA - Global Design System & Core Tokens
+   Pure Black & Gold Visual Philosophy
+   ========================================================================== */
+
+:root,
+[data-theme="dark"] {
+  /* Color Palette - Obsidian Black & Radiant Gold */
+  --color-black: #000000;
+  --color-surface: #0a0a0a;
+  --color-gold-primary: #C9A227;
+  --color-gold-bright: #E6C65C;
+  --color-gold-dark: #332807;
+  --color-gold-muted: #806619;
+  --color-gold-hairline: rgba(201, 162, 39, 0.22);
+  --color-gold-hairline-bright: rgba(230, 198, 92, 0.45);
+  --nav-bg: rgba(0, 0, 0, 0.78);
+  --nav-border: rgba(201, 162, 39, 0.22);
+  --selection-bg: var(--color-gold-dark);
+  --selection-color: var(--color-gold-bright);
+
+  /* Dual-Theme Typography Tokens (Dark: Glowing Golden Text & Border) */
+  --display-text-color: #E6C65C;
+  --display-text-stroke: 1.5px #E6C65C;
+  --display-text-glow: 0 0 16px rgba(230, 198, 92, 0.75), 0 0 32px rgba(201, 162, 39, 0.45);
+  
+  --display-text-hover-stroke: 1.5px #FFF0A0;
+  --display-text-hover-glow: 0 0 24px rgba(255, 240, 160, 0.9), 0 0 45px rgba(230, 198, 92, 0.65);
+
+  --body-accent-color: #E6C65C;
+  --body-accent-stroke: 0.35px #E6C65C;
+  --body-accent-glow: 0 0 10px rgba(230, 198, 92, 0.5);
+
+  --micro-text-color: #E6C65C;
+  --micro-text-stroke: 0.35px #E6C65C;
+  --micro-text-glow: 0 0 8px rgba(230, 198, 92, 0.5);
+
+  --svg-text-fill: #E6C65C;
+  --svg-text-stroke: #E6C65C;
+  --svg-text-glow: drop-shadow(0 0 6px rgba(230, 198, 92, 0.6));
+
+  /* Typography Families */
+  --font-cursive: 'Lobster', 'Rouge Script', cursive;
+  --font-serif: 'Lobster', 'Rouge Script', cursive, serif;
+  --font-editorial: 'Lobster', 'Rouge Script', cursive;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Spatial Scale & Grids */
+  --space-unit: 8px;
+  --site-max-width: 1560px;
+  --page-padding-x: clamp(24px, 5vw, 80px);
+  --header-height: 80px;
+
+  /* Z-Index Architecture */
+  --z-background: 0;
+  --z-canvas: 10;
+  --z-content: 20;
+  --z-overlay: 50;
+  --z-nav: 100;
+}
+
+[data-theme="light"] {
+  /* Color Palette - Architectural Alabaster Paper & Deep Bronze Onyx */
+  --color-black: #F5F3ED;
+  --color-surface: #EAE6DB;
+  --color-gold-primary: #7A5B10;
+  --color-gold-bright: #16130D;
+  --color-gold-dark: #DCD4C0;
+  --color-gold-muted: #61480C;
+  --color-gold-hairline: rgba(122, 91, 16, 0.20);
+  --color-gold-hairline-bright: rgba(122, 91, 16, 0.48);
+  --nav-bg: rgba(245, 243, 237, 0.88);
+  --nav-border: rgba(122, 91, 16, 0.20);
+  --selection-bg: #E2D9C4;
+  --selection-color: #16130D;
+
+  /* Dual-Theme Typography Tokens (Light: Black Fill with Noticeable Golden Border) */
+  --display-text-color: #000000;
+  --display-text-stroke: 1.5px var(--color-gold-primary);
+  --display-text-glow: 0 0 16px rgba(201, 162, 39, 0.25);
+  
+  --display-text-hover-stroke: 1.5px var(--color-gold-bright);
+  --display-text-hover-glow: 0 0 24px rgba(230, 198, 92, 0.45);
+
+  --body-accent-color: #000000;
+  --body-accent-stroke: 0.35px var(--color-gold-primary);
+  --body-accent-glow: none;
+
+  --micro-text-color: #000000;
+  --micro-text-stroke: 0.35px var(--color-gold-primary);
+  --micro-text-glow: none;
+
+  --svg-text-fill: #000000;
+  --svg-text-stroke: var(--color-gold-primary);
+  --svg-text-glow: none;
+}
+
+/* Document Reset & Base Standards */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--color-black);
+  color: var(--color-gold-primary);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: auto;
+  overflow-x: hidden;
+  width: 100%;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body {
+  background-color: var(--color-black);
+  color: var(--color-gold-primary);
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Custom Text Selection */
+::selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-color);
+}
+
+::-moz-selection {
+  background-color: var(--color-gold-dark);
+  color: var(--color-gold-bright);
+}
+
+/* Discreet Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-dark);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-muted);
+}
+
+/* Root Application Wrapper */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Global Interactive Resets */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+/* SVG Line Standards */
+svg {
+  display: block;
+}
+
+.gold-hairline {
+  stroke: var(--color-gold-primary);
+  stroke-width: 1px;
+  vector-effect: non-scaling-stroke;
+}
+
+.gold-hairline-subtle {
+  stroke: var(--color-gold-hairline);
+  stroke-width: 1px;
+  vector-effect: non-scaling-stroke;
+}
+
+/* Accessibility: Reduced Motion overrides */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .intro-section,
+  .about-section,
+  .interlude-section,
+  .philosophy-section,
+  .whatwedo-section {
+    height: auto !important;
+    min-height: 100vh !important;
+  }
+
+  .intro-pin-container,
+  .about-pin-container,
+  .interlude-pin-container,
+  .philosophy-pin-container,
+  .whatwedo-pin-container {
+    height: auto !important;
+    min-height: 100vh !important;
+    position: relative !important;
+    padding-top: clamp(100px, 14vh, 160px) !important;
+  }
+
+  .intro-statement-line-inner,
+  .philo-s1-sub-inner {
+    transform: none !important;
+  }
+
+  .philosophy-stage {
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 56px !important;
+  }
+
+  .philo-slide {
+    position: relative !important;
+    inset: auto !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  .whatwedo-discipline-row {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  .about-line {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  .about-rule-line,
+  .intro-axis-line,
+  .whatwedo-travel-path,
+  .sys-connector-active,
+  .exp1-path-active,
+  .exp2-pure-shape,
+  .viewport-curve {
+    stroke-dashoffset: 0 !important;
+    opacity: 0.8 !important;
+  }
+}
+
+/* ==========================================================================
+   Section Background Transparency
+   Allows living background particle field to breathe beneath editorial content
+   ========================================================================== */
+.intro-section,
+.about-section,
+.system-interlude-section,
+.philosophy-section,
+.what-we-do-section,
+.contact-section {
+  background-color: transparent !important;
+}
+
