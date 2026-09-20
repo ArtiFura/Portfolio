@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Page from './Page';
 import { PAGES } from '../../config/pages';
 import { getLenis, resetLenisScroll } from '../../hooks/useLenisScroll';
+import { useSectionSnap } from '../../hooks/useSectionSnap';
 
 /**
  * ActivePageContainer
@@ -34,6 +35,14 @@ export default function ActivePageContainer({
   const isTransitioningRef = useRef(false);
   const leavingRef = useRef(null);
   const enteringRef = useRef(null);
+  const mainContainerRef = useRef(null);
+
+  // Architectural SECTION-ONLY Scroll Snapping System
+  useSectionSnap({
+    enabled: !transitionState.isTransitioning && !isTransitioningRef.current,
+    pageIndex: displayedPageIndex,
+    containerRef: mainContainerRef,
+  });
 
   // Synchronously ensure scroll is anchored at top whenever displayed page changes
   useLayoutEffect(() => {
@@ -263,6 +272,7 @@ export default function ActivePageContainer({
   // Static Idle Mode: Active page in natural document flow starting at scroll 0
   return (
     <main
+      ref={mainContainerRef}
       id="artifura-contained-world"
       role="main"
       style={{
