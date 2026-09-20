@@ -1,0 +1,132 @@
+/* ==========================================================================
+   ARTIFURA — Core Design Tokens & Architectural Theme System
+   ========================================================================== */
+
+:root {
+  /* Common System Spacing & Dimensional Tokens */
+  --space-unit: 8px;
+  --header-height: 72px;
+  --section-padding: clamp(24px, 5vw, 96px);
+  
+  /* Fonts */
+  --font-display: 'Cinzel', 'Bodoni Moda', 'Cormorant Garamond', serif;
+  --font-serif: 'Cormorant Garamond', 'Bodoni Moda', serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Space Mono', 'JetBrains Mono', monospace;
+
+  /* Z-Index Hierarchy */
+  --z-bg: 0;
+  --z-grid: 5;
+  --z-canvas: 10;
+  --z-content: 20;
+  --z-holographic: 25;
+  --z-hud: 40;
+  --z-nav: 50;
+  --z-modal: 90;
+  --z-cursor: 100;
+
+  /* Dynamic Velocity Distortion Tokens (updated via JS) */
+  --scroll-velocity: 0;
+  --scroll-distortion: 0px;
+  --scroll-chromatic: 0px;
+  --scroll-shear: 0deg;
+}
+
+/* Primary Architectural Light Theme (Alabaster & Bronze Onyx) */
+:root,
+[data-theme="light"] {
+  --color-black: #F5F3ED;
+  --color-surface: #EAE6DB;
+
+  --color-gold-primary: #7A5B10;
+  --color-gold-bright: #16130D;
+  --color-gold-dark: #DCD4C0;
+  --color-gold-muted: #61480C;
+
+  --color-gold-hairline: rgba(122, 91, 16, 0.20);
+  --color-gold-hairline-bright: rgba(122, 91, 16, 0.48);
+
+  --nav-bg: rgba(245, 243, 237, 0.88);
+  --nav-border: rgba(122, 91, 16, 0.20);
+
+  --selection-bg: #E2D9C4;
+  --selection-color: #16130D;
+
+  --display-text-color: #000000;
+  --display-text-stroke: 1.5px var(--color-gold-primary);
+  --display-text-glow: none;
+
+  --display-text-hover-stroke: 1.5px var(--color-gold-bright);
+  --display-text-hover-glow: none;
+
+  --body-accent-color: #000000;
+  --body-accent-stroke: 0.35px var(--color-gold-primary);
+  --body-accent-glow: none;
+
+  --micro-text-color: #000000;
+  --micro-text-stroke: 0.35px var(--color-gold-primary);
+  --micro-text-glow: none;
+
+  --svg-text-fill: #000000;
+  --svg-text-stroke: var(--color-gold-primary);
+  --svg-text-glow: none;
+
+  --bg-primary: #F5F3ED;
+  --bg-secondary: #EAE6DB;
+  --text-main: #16130D;
+  --text-muted: rgba(22, 19, 13, 0.62);
+  --text-whisper: rgba(122, 91, 16, 0.55);
+  --card-border: rgba(122, 91, 16, 0.18);
+  --card-bg: rgba(234, 230, 219, 0.72);
+  --holo-faint-cyan: rgba(70, 110, 130, 0.25);
+  --holo-faint-bronze: rgba(122, 91, 16, 0.35);
+}
+
+/* Secondary Obsidian Dark Theme */
+[data-theme="dark"] {
+  --color-black: #0E0D0B;
+  --color-surface: #181612;
+
+  --color-gold-primary: #C9A227;
+  --color-gold-bright: #F4E8C1;
+  --color-gold-dark: #332807;
+  --color-gold-muted: #8A6D1B;
+
+  --color-gold-hairline: rgba(201, 162, 39, 0.22);
+  --color-gold-hairline-bright: rgba(244, 232, 193, 0.45);
+
+  --nav-bg: rgba(14, 13, 11, 0.88);
+  --nav-border: rgba(201, 162, 39, 0.22);
+
+  --selection-bg: #332807;
+  --selection-color: #F4E8C1;
+
+  --display-text-color: #F4E8C1;
+  --display-text-stroke: 0 transparent;
+  --display-text-glow: none;
+
+  --display-text-hover-stroke: 0 transparent;
+  --display-text-hover-glow: none;
+
+  --body-accent-color: #F4E8C1;
+  --body-accent-stroke: 0 transparent;
+  --body-accent-glow: none;
+
+  --micro-text-color: #C9A227;
+  --micro-text-stroke: 0 transparent;
+  --micro-text-glow: none;
+
+  --svg-text-fill: #F4E8C1;
+  --svg-text-stroke: transparent;
+  --svg-text-glow: none;
+
+  --bg-primary: #0E0D0B;
+  --bg-secondary: #181612;
+  --text-main: #F4E8C1;
+  --text-muted: rgba(244, 232, 193, 0.65);
+  --text-whisper: rgba(201, 162, 39, 0.55);
+  --card-border: rgba(201, 162, 39, 0.22);
+  --card-bg: rgba(24, 22, 18, 0.72);
+  --holo-faint-cyan: rgba(120, 180, 210, 0.25);
+  --holo-faint-bronze: rgba(244, 232, 193, 0.35);
+}
