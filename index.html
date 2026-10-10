@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" class="dark" style="background-color: #131314; color: #e5e2e3;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARTIFURA // Precision Technology Advisory &amp; High-Performance Engineering</title>
+    <meta name="description" content="ARTIFURA is a precision technology advisory and engineering firm building digital products, resilient software, and intelligent agentic systems for enterprises ready to scale." />
+    <meta property="og:title" content="ARTIFURA // Precision Technology Advisory &amp; High-Performance Engineering" />
+    <meta property="og:description" content="ARTIFURA is a precision technology advisory and engineering firm building digital products, resilient software, and intelligent agentic systems for enterprises ready to scale." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://artifura.in/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#131314" />
+    <link rel="canonical" href="https://artifura.in/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script>
+      // Immediately enforce manual scroll restoration before browser starts layout or restoring scroll
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      // Clean non-home hashes so browser does not anchor-jump on reload
+      if (window.location.hash && window.location.hash !== '#home') {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
+      // Reset scroll position immediately
+      window.scrollTo(0, 0);
+
+      // Save (0, 0) into history entry upon unload/pagehide
+      window.addEventListener('beforeunload', function () {
+        window.scrollTo(0, 0);
+      });
+      window.addEventListener('pagehide', function () {
+        window.scrollTo(0, 0);
+      });
+    </script>
+  </head>
+  <body class="bg-[#131314] text-[#e5e2e3] antialiased selection:bg-[#ffe08d]/20 selection:text-[#ffe08d]" style="background-color: #131314; color: #e5e2e3; margin: 0; padding: 0;">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
