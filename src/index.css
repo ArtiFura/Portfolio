@@ -25,30 +25,9 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Snap Scrolling System (Native Fallback when Lenis is not active) */
-  html.snap-enabled:not(.lenis) {
-    scroll-snap-type: y mandatory;
-    scroll-padding-top: 5rem;
-    /* 80px fixed header offset */
-    scroll-behavior: smooth;
-  }
-
-  @media (max-width: 768px) {
-
-    html.snap-enabled,
-    html.snap-enabled:not(.lenis) {
-      scroll-snap-type: none !important;
-      /* Never fight native touch momentum on mobile screens */
-    }
-
-    .snap-section {
-      scroll-snap-align: none !important;
-    }
-  }
-
-  .snap-section {
-    scroll-snap-align: start;
-    scroll-snap-stop: normal;
+  /* Smooth Momentum Scrolling - native snap disabled for unconstrained fluid momentum */
+  html {
+    scroll-behavior: auto; /* Let Lenis manage momentum physics without browser snap conflicts */
   }
 }
 

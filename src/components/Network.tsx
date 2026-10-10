@@ -16,7 +16,7 @@ export const Network: React.FC<NetworkProps> = ({ onOpenEstimator }) => {
   const activeAudienceObj = TARGET_AUDIENCES.find((a) => a.label === activeAudienceName);
 
   return (
-    <section className="snap-section w-full min-h-[calc(100vh-5rem)] flex flex-col justify-center pb-16 md:pb-24 bg-transparent relative" id="network">
+    <section className="w-full min-h-[calc(100vh-5rem)] flex flex-col justify-center pb-16 md:pb-24 bg-transparent relative" id="network">
       {/* Section Divider */}
       <SectionDivider
         number="06"

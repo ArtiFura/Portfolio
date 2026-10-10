@@ -9,7 +9,7 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenEstimator }) => {
   return (
-    <section className="snap-section relative w-full overflow-hidden min-h-[calc(100vh-5rem)] flex flex-col justify-center pb-16 md:pb-20 bg-transparent" id="hero">
+    <section className="relative w-full overflow-hidden min-h-[calc(100vh-5rem)] flex flex-col justify-center pb-16 md:pb-20 bg-transparent" id="hero">
       {/* Section Divider */}
       <SectionDivider
         number="00"

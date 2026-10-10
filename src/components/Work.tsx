@@ -54,7 +54,7 @@ export const Work: React.FC<WorkProps> = ({ onInquire }) => {
   }, [activeRegionIndex]);
 
   return (
-    <section className="snap-section w-full min-h-[calc(100vh-5rem)] pb-16 md:pb-24 bg-transparent relative" id="work">
+    <section className="w-full min-h-[calc(100vh-5rem)] pb-16 md:pb-24 bg-transparent relative" id="work">
       {/* Section Divider */}
       <SectionDivider
         number="04"

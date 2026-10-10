@@ -75,7 +75,7 @@ export const Contact: React.FC<ContactProps> = ({ initialService }) => {
   };
 
   return (
-    <section className="snap-section w-full min-h-[calc(100vh-5rem)] flex flex-col justify-center pb-16 md:pb-24 bg-transparent relative" id="contact">
+    <section className="w-full min-h-[calc(100vh-5rem)] flex flex-col justify-center pb-16 md:pb-24 bg-transparent relative" id="contact">
       {/* Section Divider */}
       <SectionDivider
         number="07"

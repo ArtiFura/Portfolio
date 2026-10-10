@@ -36,7 +36,7 @@ interface MetricsState {
 
 export const PerformanceMetrics: React.FC = () => {
   // HUD display modes: 'expanded' (full card), 'compact' (mini pill), 'hidden' (launcher button)
-  const [mode, setMode] = useState<'expanded' | 'compact' | 'hidden'>('expanded');
+  const [mode, setMode] = useState<'expanded' | 'compact' | 'hidden'>('compact');
 
   const [metrics, setMetrics] = useState<MetricsState>({
     fps: 60,
@@ -212,10 +212,12 @@ export const PerformanceMetrics: React.FC = () => {
   if (mode === 'compact') {
     return (
       <div className="fixed bottom-4 left-4 z-50 flex items-center select-none animate-fadeIn">
-        <div
+        <button
+          type="button"
           onClick={() => setMode('expanded')}
-          className="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-[#0c0c0e]/95 backdrop-blur-xl border border-[#4d4637]/70 shadow-[0_8px_30px_rgba(0,0,0,0.8)] cursor-pointer hover:border-[#ffe08d]/70 transition-all duration-200 group"
-          title="Click to expand performance panel"
+          className="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-[#0c0c0e]/95 backdrop-blur-xl border border-[#4d4637]/70 shadow-[0_8px_30px_rgba(0,0,0,0.8)] cursor-pointer hover:border-[#ffe08d]/70 hover:bg-[#16161b] hover:scale-105 active:scale-95 transition-all duration-200 group text-left"
+          title="Click to expand performance metrics"
+          aria-label="Click to expand performance metrics"
         >
           <span
             className="w-2 h-2 rounded-full animate-pulse shadow-[0_0_8px_currentColor]"
@@ -231,17 +233,10 @@ export const PerformanceMetrics: React.FC = () => {
           <span className="font-mono text-[10px] text-[#c4c7c5]">
             {metrics.frameTime}ms
           </span>
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              setMode('expanded');
-            }}
-            className="text-[#99907e] hover:text-[#ffe08d] transition-colors p-0.5 rounded cursor-pointer"
-            aria-label="Expand metrics"
-          >
+          <span className="text-[#99907e] group-hover:text-[#ffe08d] transition-colors p-0.5 rounded">
             <ChevronUp size={13} />
-          </button>
-        </div>
+          </span>
+        </button>
       </div>
     );
   }
@@ -282,15 +277,15 @@ export const PerformanceMetrics: React.FC = () => {
             onClick={() => setMode('compact')}
             className="p-1 text-[#99907e] hover:text-[#ffe08d] hover:bg-[#201f20] rounded transition-colors cursor-pointer"
             title="Minimize to pill"
-            aria-label="Minimize"
+            aria-label="Minimize to pill"
           >
             <Minimize2 size={12} />
           </button>
           <button
-            onClick={() => setMode('hidden')}
+            onClick={() => setMode('compact')}
             className="p-1 text-[#99907e] hover:text-[#f87171] hover:bg-[#201f20] rounded transition-colors cursor-pointer"
-            title="Close HUD"
-            aria-label="Close"
+            title="Minimize HUD"
+            aria-label="Minimize HUD"
           >
             <X size={12} />
           </button>

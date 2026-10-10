@@ -18,7 +18,7 @@ export const Stack: React.FC = () => {
   const activeTech = hoveredTech || selectedTech;
 
   return (
-    <section className="snap-section w-full min-h-[calc(100vh-5rem)] flex flex-col justify-center pb-16 md:pb-20 bg-transparent overflow-hidden relative" id="stack">
+    <section className="w-full min-h-[calc(100vh-5rem)] flex flex-col justify-center pb-16 md:pb-20 bg-transparent overflow-hidden relative" id="stack">
       {/* Section Divider */}
       <SectionDivider
         number="03"

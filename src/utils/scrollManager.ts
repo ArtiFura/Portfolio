@@ -33,7 +33,7 @@ export function initScrollMomentum(): Lenis | null {
     orientation: 'vertical',
     gestureOrientation: 'vertical',
     smoothWheel: true,
-    wheelMultiplier: 0.95,
+    wheelMultiplier: 1.15, // Enhanced responsive glide with high momentum
     touchMultiplier: 1.0,
     syncTouch: false, // CRITICAL: NEVER hijack touch on mobile/touch screens to preserve 60/120Hz hardware momentum
     syncTouchLerp: 0.1,

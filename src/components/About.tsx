@@ -5,7 +5,7 @@ import { handleSpotlightMove } from '../utils/scrollManager';
 
 export const About: React.FC = () => {
   return (
-    <section className="snap-section w-full min-h-[calc(100vh-5rem)] flex flex-col justify-center pb-16 md:pb-24 bg-transparent relative" id="about">
+    <section className="w-full min-h-[calc(100vh-5rem)] flex flex-col justify-center pb-16 md:pb-24 bg-transparent relative" id="about">
       {/* Section Divider */}
       <SectionDivider
         number="01"

@@ -37,7 +37,7 @@ export const HomeIntro: React.FC<HomeIntroProps> = ({ onAutoTransition, onIntroC
   return (
     <section
       id="home"
-      className="snap-section relative w-full h-screen min-h-[640px] bg-transparent overflow-hidden select-none z-30 p-0 m-0"
+      className="relative w-full h-screen min-h-[640px] bg-transparent overflow-hidden select-none z-30 p-0 m-0"
     >
       {/* Ambient background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] sm:w-[720px] h-[240px] sm:h-[380px] bg-[#ffe08d]/10 rounded-full blur-[80px] sm:blur-[140px] pointer-events-none animate-ambient" />

@@ -324,7 +324,7 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
   return (
     <section 
       ref={sectionRef}
-      className="snap-section w-full min-h-[calc(100vh-5rem)] flex flex-col justify-center pb-16 md:pb-24 bg-transparent relative overflow-hidden select-none" 
+      className="w-full min-h-[calc(100vh-5rem)] flex flex-col justify-center pb-16 md:pb-24 bg-transparent relative overflow-hidden select-none" 
       id="services"
     >
       {/* Section Divider */}
